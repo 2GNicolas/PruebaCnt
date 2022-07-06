@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Pacientes";
+}
+
+<h1>Pacientes</h1>
+
+<table class="table table-borderless shadow-lg">
+    <thead>
+        <tr>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Prioridad</th>
+            <th>Riesgo</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var paciente in Model)
+            {
+        <tr>
+
+            <td>@paciente.numeroDocumento</td>
+            <td>@paciente.nombres</td>
+            <td>@paciente.apellidos</td>
+            <td>@paciente.edad</td>
+            <td>@paciente.sexo</td>
+            <td>@paciente.prioridad</td>
+            <td>@paciente.riesgo</td>
+            <td><p class="font-weight-bold">@paciente.estadoPaciente</p></td>
+            <td>
+                <a class="btn btn-outline-primary" asp-action="Atender" asp-controller="Home" asp-route-Documento="@paciente.numeroDocumento">Atender</a>
+            </td>
+
+        </tr>
+            }
+    </tbody>
+</table>

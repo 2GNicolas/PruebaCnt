@@ -1,0 +1,102 @@
+﻿@{
+    List<ApiCnt.model.paciente> listP = ViewBag.personas;
+
+    ViewData["Title"] = "Personas";
+}
+
+<h1>Personas</h1>
+
+<p>Paciente fumador de mayor Prioridad con estado Pendiente: <label class="shadow-lg .bg-secondary">@listP.ElementAt(0).nombres @listP.ElementAt(0).apellidos</label> </p>
+
+<table class="table table-borderless shadow-lg">
+    <thead>
+        <tr>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+            <th>Edad</th>
+            <th>Prioridad</th>
+            <th>Riesgo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td> @listP.ElementAt(0).numeroDocumento</td>
+            <td> @listP.ElementAt(0).nombres</td>
+            <td> @listP.ElementAt(0).apellidos</td>
+            <td> @listP.ElementAt(0).sexo</td>
+            <td> @listP.ElementAt(0).edad</td>
+            <td> @listP.ElementAt(0).prioridad</td>
+            <td> @listP.ElementAt(0).riesgo</td>
+            <td><p class="font-weight-bold"> @listP.ElementAt(0).estadoPaciente</p></td>
+
+        </tr>
+    </tbody>
+</table>
+
+<p>Paciente que tiene la menor edad con estado Pendiente: <label class="shadow-lg .bg-secondary">@listP.ElementAt(1).nombres  @listP.ElementAt(1).apellidos</label></p>
+
+<table class="table table-borderless shadow-lg">
+    <thead>
+        <tr>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+            <th>Edad</th>
+            <th>Prioridad</th>
+            <th>Riesgo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td> @listP.ElementAt(1).numeroDocumento</td>
+            <td> @listP.ElementAt(1).nombres</td>
+            <td> @listP.ElementAt(1).apellidos</td>
+            <td> @listP.ElementAt(1).sexo</td>
+            <td> @listP.ElementAt(1).edad</td>
+            <td> @listP.ElementAt(1).prioridad</td>
+            <td> @listP.ElementAt(1).riesgo</td>
+            <td> <p class="font-weight-bold">@listP.ElementAt(1).estadoPaciente</p></td>
+
+        </tr>
+    </tbody>
+</table>
+
+<p>Paciente que tiene la mayor edad con estado Pendiente: <label class="shadow-lg .bg-secondary">@listP.ElementAt(2).nombres @listP.ElementAt(2).apellidos </label></p> 
+
+<table class="table table-borderless shadow-lg">
+    <thead>
+        <tr>
+            <th>Documento</th>
+            <th>Nombres</th>
+            <th>Apellidos</th>
+            <th>Sexo</th>
+            <th>Edad</th>
+            <th>Prioridad</th>
+            <th>Riesgo</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+
+            <td> @listP.ElementAt(2).numeroDocumento</td>
+            <td> @listP.ElementAt(2).nombres</td>
+            <td> @listP.ElementAt(2).apellidos</td>
+            <td> @listP.ElementAt(2).sexo</td>
+            <td> @listP.ElementAt(2).edad</td>
+            <td> @listP.ElementAt(2).prioridad</td>
+            <td> @listP.ElementAt(2).riesgo</td>
+            <td><p class="font-weight-bold"> @listP.ElementAt(2).estadoPaciente</p></td>
+
+        </tr>
+    </tbody>
+</table>
+
+

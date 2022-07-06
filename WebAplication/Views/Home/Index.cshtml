@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form method="post" action="/Home/NuevoPaciente" >
+    <div>
+        <div class="form-group">
+            <!-- Documento -->
+            <label for="id_id" class="control-label">Documento</label>
+            <input type="text" class="form-control" id="id_id" name="numeroDocumento" placeholder="1234567890" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Nombres -->
+            <label for="nombres_id" class="control-label">Nombres</label>
+            <input type="text" class="form-control" id="nombres_id" name="nombres" placeholder="Carlos Daniel" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Apellidos -->
+            <label for="apellidos_id" class="control-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos_id" name="apellidos" placeholder="Murcia Guzman" required>
+        </div>
+
+        <div class="form-group">
+            <!-- Edad-->
+            <label for="edad_id" class="control-label">Edad</label>
+            <input type="number" class="form-control" id="edad_id" name="edad" placeholder="34" required>
+        </div>
+        <div class="form-group">
+            <!-- Edad-->
+            <label for="dir_id" class="control-label">Direccion</label>
+            <input type="text" class="form-control" id="dir_id" name="direccion" placeholder="calle">
+        </div>
+        <label class="control-label">Sexo</label>
+        <div class="form-check">
+            <!--Sexo-->
+            <input class="form-check-input" type="radio" name="sexo" id="SexoM" value="M">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Masculino
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="sexo" id="SexoF" value="F" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                Femenino
+            </label>
+        </div>
+        <div class="form-group">
+            <!-- Peso -->
+            <label for="peso_id" class="control-label">Peso(Kg)</label>
+            <input type="text" class="form-control" id="peso_id" name="peso" placeholder="64" step=".01" required>
+        </div>
+        <div class="form-group">
+            <!-- Estatura -->
+            <label for="estatura_id" class="control-label">Estatura(cm)</label>
+            <input type="text" class="form-control" id="estatura_id" name="estatura" placeholder="1.78" step=".01" required>
+        </div>
+        <label class="control-label">¿Fuma?</label>
+        <div class="form-check">
+            <!--Fumador-->
+            <input class="form-check-input" type="radio" name="fumador" id="fumaPositivo" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Si
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="fumador" id="fumaNegativo" value="0" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                No
+            </label>
+        </div>
+        <div class="form-group">
+            <!--Años Fumando-->
+            <label for="yearsfumando_id" class="control-label">Cuantos años</label>
+            <input type="number" class="form-control" id="yearsfumando_id" name="yearsFumando" placeholder="3" disabled>
+        </div>
+        <label class="control-label">¿Dieta?</label>
+        <div class="form-check">
+            <!--Dieta-->
+            <input class="form-check-input" type="radio" name="dieta" id="flexRadioDefault1" value="1">
+            <label class="form-check-label" for="flexRadioDefault1">
+                Si
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="dieta" id="flexRadioDefault2" value="0" checked>
+            <label class="form-check-label" for="flexRadioDefault2">
+                No
+            </label>
+        </div>
+        <div class="form-group">
+            <!-- PesoEstatura -->
+            <label for="pesoEstatura_id" class="control-label">Relacion Peso Estatura</label>
+            <input type="number" class="form-control" id="pesoEstatura_id" name="pesoEstatura" placeholder="0-4" min="0" max="4">
+        </div>
+
+        <div class="form-group">
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-outline-primary">Guardar</button>
+        </div>
+    </div>
+</form>
